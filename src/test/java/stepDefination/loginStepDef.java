@@ -16,7 +16,7 @@ public class loginStepDef {
     }
 
     @When("^user enter (.*) and (.*)$")
-    public void userEnterUsername(String username, String password)
+    public void userEnterUsernameAndPassword(String username, String password)
     {
         Hooks.driver.findElement(By.id("user-name")).sendKeys(username);
         Hooks.driver.findElement(By.name("password")).sendKeys(password);
@@ -30,7 +30,7 @@ public class loginStepDef {
     }
 
     @Then("Verify that I am logged")
-    public void step6 ()
+    public void verifyIamLogged()
     {
 
         SoftAssert softAssert = new SoftAssert();
